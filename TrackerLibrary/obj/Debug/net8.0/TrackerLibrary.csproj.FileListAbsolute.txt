@@ -1,0 +1,11 @@
+C:\Users\elpin\OneDrive\Documents\Belajar\C#\Projects\TournamentTracker\TrackerLibrary\bin\Debug\net8.0\TrackerLibrary.deps.json
+C:\Users\elpin\OneDrive\Documents\Belajar\C#\Projects\TournamentTracker\TrackerLibrary\bin\Debug\net8.0\TrackerLibrary.dll
+C:\Users\elpin\OneDrive\Documents\Belajar\C#\Projects\TournamentTracker\TrackerLibrary\bin\Debug\net8.0\TrackerLibrary.pdb
+C:\Users\elpin\OneDrive\Documents\Belajar\C#\Projects\TournamentTracker\TrackerLibrary\obj\Debug\net8.0\TrackerLibrary.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\elpin\OneDrive\Documents\Belajar\C#\Projects\TournamentTracker\TrackerLibrary\obj\Debug\net8.0\TrackerLibrary.AssemblyInfoInputs.cache
+C:\Users\elpin\OneDrive\Documents\Belajar\C#\Projects\TournamentTracker\TrackerLibrary\obj\Debug\net8.0\TrackerLibrary.AssemblyInfo.cs
+C:\Users\elpin\OneDrive\Documents\Belajar\C#\Projects\TournamentTracker\TrackerLibrary\obj\Debug\net8.0\TrackerLibrary.csproj.CoreCompileInputs.cache
+C:\Users\elpin\OneDrive\Documents\Belajar\C#\Projects\TournamentTracker\TrackerLibrary\obj\Debug\net8.0\TrackerLibrary.dll
+C:\Users\elpin\OneDrive\Documents\Belajar\C#\Projects\TournamentTracker\TrackerLibrary\obj\Debug\net8.0\refint\TrackerLibrary.dll
+C:\Users\elpin\OneDrive\Documents\Belajar\C#\Projects\TournamentTracker\TrackerLibrary\obj\Debug\net8.0\TrackerLibrary.pdb
+C:\Users\elpin\OneDrive\Documents\Belajar\C#\Projects\TournamentTracker\TrackerLibrary\obj\Debug\net8.0\ref\TrackerLibrary.dll
