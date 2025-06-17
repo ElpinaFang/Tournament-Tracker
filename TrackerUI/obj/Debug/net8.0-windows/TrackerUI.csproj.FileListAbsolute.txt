@@ -22,3 +22,17 @@ C:\Users\elpin\OneDrive\Documents\Belajar\C#\Projects\TournamentTracker\TrackerU
 C:\Users\elpin\OneDrive\Documents\Belajar\C#\Projects\TournamentTracker\TrackerUI\obj\Debug\net8.0-windows\TrackerUI.pdb
 C:\Users\elpin\OneDrive\Documents\Belajar\C#\Projects\TournamentTracker\TrackerUI\obj\Debug\net8.0-windows\TrackerUI.genruntimeconfig.cache
 C:\Users\elpin\OneDrive\Documents\Belajar\C#\Projects\TournamentTracker\TrackerUI\obj\Debug\net8.0-windows\ref\TrackerUI.dll
+C:\Users\elpin\OneDrive\Documents\Belajar\C#\Projects\TournamentTracker\TrackerUI\obj\Debug\net8.0-windows\TrackerUI.sourcelink.json
+C:\Users\elpin\OneDrive\Documents\Belajar\C#\Projects\TournamentTracker\TrackerUI\bin\Debug\net8.0-windows\TrackerUI.dll.config
+C:\Users\elpin\OneDrive\Documents\Belajar\C#\Projects\TournamentTracker\TrackerUI\bin\Debug\net8.0-windows\Dapper.dll
+C:\Users\elpin\OneDrive\Documents\Belajar\C#\Projects\TournamentTracker\TrackerUI\bin\Debug\net8.0-windows\System.Configuration.ConfigurationManager.dll
+C:\Users\elpin\OneDrive\Documents\Belajar\C#\Projects\TournamentTracker\TrackerUI\bin\Debug\net8.0-windows\System.Data.SqlClient.dll
+C:\Users\elpin\OneDrive\Documents\Belajar\C#\Projects\TournamentTracker\TrackerUI\bin\Debug\net8.0-windows\System.Diagnostics.EventLog.dll
+C:\Users\elpin\OneDrive\Documents\Belajar\C#\Projects\TournamentTracker\TrackerUI\bin\Debug\net8.0-windows\System.Security.Cryptography.ProtectedData.dll
+C:\Users\elpin\OneDrive\Documents\Belajar\C#\Projects\TournamentTracker\TrackerUI\bin\Debug\net8.0-windows\runtimes\win-arm64\native\sni.dll
+C:\Users\elpin\OneDrive\Documents\Belajar\C#\Projects\TournamentTracker\TrackerUI\bin\Debug\net8.0-windows\runtimes\win-x64\native\sni.dll
+C:\Users\elpin\OneDrive\Documents\Belajar\C#\Projects\TournamentTracker\TrackerUI\bin\Debug\net8.0-windows\runtimes\win-x86\native\sni.dll
+C:\Users\elpin\OneDrive\Documents\Belajar\C#\Projects\TournamentTracker\TrackerUI\bin\Debug\net8.0-windows\runtimes\unix\lib\net8.0\System.Data.SqlClient.dll
+C:\Users\elpin\OneDrive\Documents\Belajar\C#\Projects\TournamentTracker\TrackerUI\bin\Debug\net8.0-windows\runtimes\win\lib\net8.0\System.Data.SqlClient.dll
+C:\Users\elpin\OneDrive\Documents\Belajar\C#\Projects\TournamentTracker\TrackerUI\bin\Debug\net8.0-windows\runtimes\win\lib\net8.0\System.Diagnostics.EventLog.Messages.dll
+C:\Users\elpin\OneDrive\Documents\Belajar\C#\Projects\TournamentTracker\TrackerUI\bin\Debug\net8.0-windows\runtimes\win\lib\net8.0\System.Diagnostics.EventLog.dll

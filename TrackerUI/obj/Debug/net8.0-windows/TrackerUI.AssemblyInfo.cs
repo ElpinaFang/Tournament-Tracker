@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("TrackerUI")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+55159ceab572ce3411dc6f84f2915dcb1e8e2761")]
 [assembly: System.Reflection.AssemblyProductAttribute("TrackerUI")]
 [assembly: System.Reflection.AssemblyTitleAttribute("TrackerUI")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
