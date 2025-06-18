@@ -34,15 +34,15 @@
             entryfeeValue = new TextBox();
             label2 = new Label();
             label3 = new Label();
-            roundDropDown = new ComboBox();
+            selectTeamDropDown = new ComboBox();
             linkLabel1 = new LinkLabel();
-            scoreButton = new Button();
-            button1 = new Button();
-            tournamentPlayerListBox = new ListBox();
+            addTeamButton = new Button();
+            createPrizeButton = new Button();
+            tournamentTeamListBox = new ListBox();
             label4 = new Label();
             deleteSelectedButton = new Button();
             button3 = new Button();
-            label5 = new Label();
+            Prizes = new Label();
             prizesListBox = new ListBox();
             createTournamentButton = new Button();
             SuspendLayout();
@@ -107,17 +107,17 @@
             label3.TabIndex = 13;
             label3.Text = "Select Team";
             // 
-            // roundDropDown
+            // selectTeamDropDown
             // 
-            roundDropDown.DropDownHeight = 200;
-            roundDropDown.DropDownWidth = 600;
-            roundDropDown.FormattingEnabled = true;
-            roundDropDown.IntegralHeight = false;
-            roundDropDown.ItemHeight = 20;
-            roundDropDown.Location = new Point(52, 370);
-            roundDropDown.Name = "roundDropDown";
-            roundDropDown.Size = new Size(299, 28);
-            roundDropDown.TabIndex = 14;
+            selectTeamDropDown.DropDownHeight = 200;
+            selectTeamDropDown.DropDownWidth = 600;
+            selectTeamDropDown.FormattingEnabled = true;
+            selectTeamDropDown.IntegralHeight = false;
+            selectTeamDropDown.ItemHeight = 20;
+            selectTeamDropDown.Location = new Point(52, 370);
+            selectTeamDropDown.Name = "selectTeamDropDown";
+            selectTeamDropDown.Size = new Size(299, 28);
+            selectTeamDropDown.TabIndex = 14;
             // 
             // linkLabel1
             // 
@@ -129,36 +129,37 @@
             linkLabel1.TabStop = true;
             linkLabel1.Text = "Create New";
             // 
-            // scoreButton
+            // addTeamButton
             // 
-            scoreButton.Font = new Font("Segoe UI Semibold", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            scoreButton.ForeColor = SystemColors.Highlight;
-            scoreButton.Location = new Point(116, 423);
-            scoreButton.Name = "scoreButton";
-            scoreButton.Size = new Size(153, 67);
-            scoreButton.TabIndex = 16;
-            scoreButton.Text = "Add Team";
-            scoreButton.UseVisualStyleBackColor = true;
+            addTeamButton.Font = new Font("Segoe UI Semibold", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            addTeamButton.ForeColor = SystemColors.Highlight;
+            addTeamButton.Location = new Point(116, 423);
+            addTeamButton.Name = "addTeamButton";
+            addTeamButton.Size = new Size(153, 67);
+            addTeamButton.TabIndex = 16;
+            addTeamButton.Text = "Add Team";
+            addTeamButton.UseVisualStyleBackColor = true;
+            addTeamButton.Click += addTeamButton_Click;
             // 
-            // button1
+            // createPrizeButton
             // 
-            button1.Font = new Font("Segoe UI Semibold", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button1.ForeColor = SystemColors.Highlight;
-            button1.Location = new Point(92, 515);
-            button1.Name = "button1";
-            button1.Size = new Size(205, 67);
-            button1.TabIndex = 17;
-            button1.Text = "Create Prize";
-            button1.UseVisualStyleBackColor = true;
+            createPrizeButton.Font = new Font("Segoe UI Semibold", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            createPrizeButton.ForeColor = SystemColors.Highlight;
+            createPrizeButton.Location = new Point(92, 515);
+            createPrizeButton.Name = "createPrizeButton";
+            createPrizeButton.Size = new Size(205, 67);
+            createPrizeButton.TabIndex = 17;
+            createPrizeButton.Text = "Create Prize";
+            createPrizeButton.UseVisualStyleBackColor = true;
             // 
-            // tournamentPlayerListBox
+            // tournamentTeamListBox
             // 
-            tournamentPlayerListBox.FormattingEnabled = true;
-            tournamentPlayerListBox.Location = new Point(443, 173);
-            tournamentPlayerListBox.Name = "tournamentPlayerListBox";
-            tournamentPlayerListBox.Size = new Size(417, 164);
-            tournamentPlayerListBox.TabIndex = 18;
-            tournamentPlayerListBox.SelectedIndexChanged += matchupListBox_SelectedIndexChanged;
+            tournamentTeamListBox.FormattingEnabled = true;
+            tournamentTeamListBox.Location = new Point(443, 173);
+            tournamentTeamListBox.Name = "tournamentTeamListBox";
+            tournamentTeamListBox.Size = new Size(417, 164);
+            tournamentTeamListBox.TabIndex = 18;
+            tournamentTeamListBox.SelectedIndexChanged += matchupListBox_SelectedIndexChanged;
             // 
             // label4
             // 
@@ -193,16 +194,16 @@
             button3.Text = "Delete Selected";
             button3.UseVisualStyleBackColor = true;
             // 
-            // label5
+            // Prizes
             // 
-            label5.AutoSize = true;
-            label5.Font = new Font("Segoe UI", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label5.ForeColor = Color.SteelBlue;
-            label5.Location = new Point(443, 372);
-            label5.Name = "label5";
-            label5.Size = new Size(197, 38);
-            label5.TabIndex = 22;
-            label5.Text = "Team / Players";
+            Prizes.AutoSize = true;
+            Prizes.Font = new Font("Segoe UI", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            Prizes.ForeColor = Color.SteelBlue;
+            Prizes.Location = new Point(443, 372);
+            Prizes.Name = "Prizes";
+            Prizes.Size = new Size(90, 38);
+            Prizes.TabIndex = 22;
+            Prizes.Text = "Prizes";
             // 
             // prizesListBox
             // 
@@ -230,15 +231,15 @@
             ClientSize = new Size(1139, 803);
             Controls.Add(createTournamentButton);
             Controls.Add(button3);
-            Controls.Add(label5);
+            Controls.Add(Prizes);
             Controls.Add(prizesListBox);
             Controls.Add(deleteSelectedButton);
             Controls.Add(label4);
-            Controls.Add(tournamentPlayerListBox);
-            Controls.Add(button1);
-            Controls.Add(scoreButton);
+            Controls.Add(tournamentTeamListBox);
+            Controls.Add(createPrizeButton);
+            Controls.Add(addTeamButton);
             Controls.Add(linkLabel1);
-            Controls.Add(roundDropDown);
+            Controls.Add(selectTeamDropDown);
             Controls.Add(label3);
             Controls.Add(entryfeeValue);
             Controls.Add(label2);
@@ -259,15 +260,15 @@
         private TextBox entryfeeValue;
         private Label label2;
         private Label label3;
-        private ComboBox roundDropDown;
+        private ComboBox selectTeamDropDown;
         private LinkLabel linkLabel1;
-        private Button scoreButton;
-        private Button button1;
-        private ListBox tournamentPlayerListBox;
+        private Button addTeamButton;
+        private Button createPrizeButton;
+        private ListBox tournamentTeamListBox;
         private Label label4;
         private Button deleteSelectedButton;
         private Button button3;
-        private Label label5;
+        private Label Prizes;
         private ListBox prizesListBox;
         private Button createTournamentButton;
     }
