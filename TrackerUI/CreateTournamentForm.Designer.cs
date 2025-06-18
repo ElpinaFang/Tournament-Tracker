@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             label1 = new Label();
-            TeamOneScoreValue = new TextBox();
+            tournamentNameValue = new TextBox();
             TeamOneScoreLabel = new Label();
-            textBox1 = new TextBox();
+            entryfeeValue = new TextBox();
             label2 = new Label();
             label3 = new Label();
             roundDropDown = new ComboBox();
@@ -40,11 +40,11 @@
             button1 = new Button();
             tournamentPlayerListBox = new ListBox();
             label4 = new Label();
-            button2 = new Button();
+            deleteSelectedButton = new Button();
             button3 = new Button();
             label5 = new Label();
             prizesListBox = new ListBox();
-            button4 = new Button();
+            createTournamentButton = new Button();
             SuspendLayout();
             // 
             // label1
@@ -58,12 +58,12 @@
             label1.TabIndex = 1;
             label1.Text = "Create Tournament";
             // 
-            // TeamOneScoreValue
+            // tournamentNameValue
             // 
-            TeamOneScoreValue.Location = new Point(52, 173);
-            TeamOneScoreValue.Name = "TeamOneScoreValue";
-            TeamOneScoreValue.Size = new Size(299, 27);
-            TeamOneScoreValue.TabIndex = 10;
+            tournamentNameValue.Location = new Point(52, 173);
+            tournamentNameValue.Name = "tournamentNameValue";
+            tournamentNameValue.Size = new Size(299, 27);
+            tournamentNameValue.TabIndex = 10;
             // 
             // TeamOneScoreLabel
             // 
@@ -77,13 +77,13 @@
             TeamOneScoreLabel.Text = "Tournament Name";
             TeamOneScoreLabel.Click += TeamOneScoreLabel_Click;
             // 
-            // textBox1
+            // entryfeeValue
             // 
-            textBox1.Location = new Point(190, 242);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(131, 27);
-            textBox1.TabIndex = 12;
-            textBox1.Text = "0";
+            entryfeeValue.Location = new Point(190, 242);
+            entryfeeValue.Name = "entryfeeValue";
+            entryfeeValue.Size = new Size(131, 27);
+            entryfeeValue.TabIndex = 12;
+            entryfeeValue.Text = "0";
             // 
             // label2
             // 
@@ -171,16 +171,16 @@
             label4.TabIndex = 19;
             label4.Text = "Team / Players";
             // 
-            // button2
+            // deleteSelectedButton
             // 
-            button2.Font = new Font("Segoe UI Semibold", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button2.ForeColor = SystemColors.Highlight;
-            button2.Location = new Point(878, 216);
-            button2.Name = "button2";
-            button2.Size = new Size(153, 93);
-            button2.TabIndex = 20;
-            button2.Text = "Delete Selected";
-            button2.UseVisualStyleBackColor = true;
+            deleteSelectedButton.Font = new Font("Segoe UI Semibold", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            deleteSelectedButton.ForeColor = SystemColors.Highlight;
+            deleteSelectedButton.Location = new Point(878, 216);
+            deleteSelectedButton.Name = "deleteSelectedButton";
+            deleteSelectedButton.Size = new Size(153, 93);
+            deleteSelectedButton.TabIndex = 20;
+            deleteSelectedButton.Text = "Delete Selected";
+            deleteSelectedButton.UseVisualStyleBackColor = true;
             // 
             // button3
             // 
@@ -212,27 +212,27 @@
             prizesListBox.Size = new Size(417, 164);
             prizesListBox.TabIndex = 21;
             // 
-            // button4
+            // createTournamentButton
             // 
-            button4.Font = new Font("Segoe UI Semibold", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button4.ForeColor = SystemColors.Highlight;
-            button4.Location = new Point(318, 645);
-            button4.Name = "button4";
-            button4.Size = new Size(426, 85);
-            button4.TabIndex = 24;
-            button4.Text = "Create Tournament";
-            button4.UseVisualStyleBackColor = true;
+            createTournamentButton.Font = new Font("Segoe UI Semibold", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            createTournamentButton.ForeColor = SystemColors.Highlight;
+            createTournamentButton.Location = new Point(318, 645);
+            createTournamentButton.Name = "createTournamentButton";
+            createTournamentButton.Size = new Size(426, 85);
+            createTournamentButton.TabIndex = 24;
+            createTournamentButton.Text = "Create Tournament";
+            createTournamentButton.UseVisualStyleBackColor = true;
             // 
             // CreateTournamentForm
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1139, 803);
-            Controls.Add(button4);
+            Controls.Add(createTournamentButton);
             Controls.Add(button3);
             Controls.Add(label5);
             Controls.Add(prizesListBox);
-            Controls.Add(button2);
+            Controls.Add(deleteSelectedButton);
             Controls.Add(label4);
             Controls.Add(tournamentPlayerListBox);
             Controls.Add(button1);
@@ -240,9 +240,9 @@
             Controls.Add(linkLabel1);
             Controls.Add(roundDropDown);
             Controls.Add(label3);
-            Controls.Add(textBox1);
+            Controls.Add(entryfeeValue);
             Controls.Add(label2);
-            Controls.Add(TeamOneScoreValue);
+            Controls.Add(tournamentNameValue);
             Controls.Add(TeamOneScoreLabel);
             Controls.Add(label1);
             Name = "CreateTournamentForm";
@@ -254,9 +254,9 @@
         #endregion
 
         private Label label1;
-        private TextBox TeamOneScoreValue;
+        private TextBox tournamentNameValue;
         private Label TeamOneScoreLabel;
-        private TextBox textBox1;
+        private TextBox entryfeeValue;
         private Label label2;
         private Label label3;
         private ComboBox roundDropDown;
@@ -265,10 +265,10 @@
         private Button button1;
         private ListBox tournamentPlayerListBox;
         private Label label4;
-        private Button button2;
+        private Button deleteSelectedButton;
         private Button button3;
         private Label label5;
         private ListBox prizesListBox;
-        private Button button4;
+        private Button createTournamentButton;
     }
 }

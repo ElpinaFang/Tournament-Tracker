@@ -29,24 +29,24 @@
         private void InitializeComponent()
         {
             label1 = new Label();
-            TeamOneScoreValue = new TextBox();
+            teamNameValue = new TextBox();
             TeamOneScoreLabel = new Label();
             roundDropDown = new ComboBox();
             label3 = new Label();
-            button1 = new Button();
+            addMemberButton = new Button();
             groupBox1 = new GroupBox();
-            textBox1 = new TextBox();
-            label2 = new Label();
-            textBox2 = new TextBox();
-            label4 = new Label();
-            textBox3 = new TextBox();
-            label5 = new Label();
-            textBox4 = new TextBox();
+            createMemberButton = new Button();
+            cellphoneValue = new TextBox();
             label6 = new Label();
-            button2 = new Button();
+            emailValue = new TextBox();
+            label5 = new Label();
+            lastNameValue = new TextBox();
+            label4 = new Label();
+            firstNameValue = new TextBox();
+            label2 = new Label();
             teamMembersListBox = new ListBox();
-            button3 = new Button();
-            button4 = new Button();
+            deleteSelectedButton = new Button();
+            createTeamButton = new Button();
             groupBox1.SuspendLayout();
             SuspendLayout();
             // 
@@ -61,12 +61,12 @@
             label1.TabIndex = 2;
             label1.Text = "Create Team";
             // 
-            // TeamOneScoreValue
+            // teamNameValue
             // 
-            TeamOneScoreValue.Location = new Point(45, 164);
-            TeamOneScoreValue.Name = "TeamOneScoreValue";
-            TeamOneScoreValue.Size = new Size(516, 27);
-            TeamOneScoreValue.TabIndex = 12;
+            teamNameValue.Location = new Point(45, 164);
+            teamNameValue.Name = "teamNameValue";
+            teamNameValue.Size = new Size(516, 27);
+            teamNameValue.TabIndex = 12;
             // 
             // TeamOneScoreLabel
             // 
@@ -102,27 +102,27 @@
             label3.TabIndex = 15;
             label3.Text = "Select Team Member";
             // 
-            // button1
+            // addMemberButton
             // 
-            button1.Font = new Font("Segoe UI Semibold", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button1.ForeColor = SystemColors.Highlight;
-            button1.Location = new Point(204, 332);
-            button1.Name = "button1";
-            button1.Size = new Size(205, 67);
-            button1.TabIndex = 18;
-            button1.Text = "Add Member";
-            button1.UseVisualStyleBackColor = true;
+            addMemberButton.Font = new Font("Segoe UI Semibold", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            addMemberButton.ForeColor = SystemColors.Highlight;
+            addMemberButton.Location = new Point(204, 332);
+            addMemberButton.Name = "addMemberButton";
+            addMemberButton.Size = new Size(205, 67);
+            addMemberButton.TabIndex = 18;
+            addMemberButton.Text = "Add Member";
+            addMemberButton.UseVisualStyleBackColor = true;
             // 
             // groupBox1
             // 
-            groupBox1.Controls.Add(button2);
-            groupBox1.Controls.Add(textBox4);
+            groupBox1.Controls.Add(createMemberButton);
+            groupBox1.Controls.Add(cellphoneValue);
             groupBox1.Controls.Add(label6);
-            groupBox1.Controls.Add(textBox3);
+            groupBox1.Controls.Add(emailValue);
             groupBox1.Controls.Add(label5);
-            groupBox1.Controls.Add(textBox2);
+            groupBox1.Controls.Add(lastNameValue);
             groupBox1.Controls.Add(label4);
-            groupBox1.Controls.Add(textBox1);
+            groupBox1.Controls.Add(firstNameValue);
             groupBox1.Controls.Add(label2);
             groupBox1.Location = new Point(40, 464);
             groupBox1.Name = "groupBox1";
@@ -131,70 +131,25 @@
             groupBox1.TabStop = false;
             groupBox1.Text = "Add New Member";
             // 
-            // textBox1
+            // createMemberButton
             // 
-            textBox1.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            textBox1.Location = new Point(187, 64);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(299, 34);
-            textBox1.TabIndex = 21;
+            createMemberButton.Font = new Font("Segoe UI Semibold", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            createMemberButton.ForeColor = SystemColors.Highlight;
+            createMemberButton.Location = new Point(109, 343);
+            createMemberButton.Name = "createMemberButton";
+            createMemberButton.Size = new Size(260, 67);
+            createMemberButton.TabIndex = 20;
+            createMemberButton.Text = "Create Member";
+            createMemberButton.UseVisualStyleBackColor = true;
+            createMemberButton.Click += createMemberButton_Click;
             // 
-            // label2
+            // cellphoneValue
             // 
-            label2.AutoSize = true;
-            label2.Font = new Font("Segoe UI", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label2.ForeColor = Color.SteelBlue;
-            label2.Location = new Point(17, 60);
-            label2.Name = "label2";
-            label2.Size = new Size(151, 38);
-            label2.TabIndex = 20;
-            label2.Text = "First Name";
-            // 
-            // textBox2
-            // 
-            textBox2.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            textBox2.Location = new Point(187, 131);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(299, 34);
-            textBox2.TabIndex = 23;
-            // 
-            // label4
-            // 
-            label4.AutoSize = true;
-            label4.Font = new Font("Segoe UI", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label4.ForeColor = Color.SteelBlue;
-            label4.Location = new Point(17, 127);
-            label4.Name = "label4";
-            label4.Size = new Size(147, 38);
-            label4.TabIndex = 22;
-            label4.Text = "Last Name";
-            // 
-            // textBox3
-            // 
-            textBox3.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            textBox3.Location = new Point(187, 196);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(299, 34);
-            textBox3.TabIndex = 25;
-            // 
-            // label5
-            // 
-            label5.AutoSize = true;
-            label5.Font = new Font("Segoe UI", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label5.ForeColor = Color.SteelBlue;
-            label5.Location = new Point(17, 192);
-            label5.Name = "label5";
-            label5.Size = new Size(83, 38);
-            label5.TabIndex = 24;
-            label5.Text = "Email";
-            // 
-            // textBox4
-            // 
-            textBox4.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            textBox4.Location = new Point(187, 264);
-            textBox4.Name = "textBox4";
-            textBox4.Size = new Size(299, 34);
-            textBox4.TabIndex = 27;
+            cellphoneValue.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            cellphoneValue.Location = new Point(187, 264);
+            cellphoneValue.Name = "cellphoneValue";
+            cellphoneValue.Size = new Size(299, 34);
+            cellphoneValue.TabIndex = 27;
             // 
             // label6
             // 
@@ -207,16 +162,62 @@
             label6.TabIndex = 26;
             label6.Text = "Cellphone";
             // 
-            // button2
+            // emailValue
             // 
-            button2.Font = new Font("Segoe UI Semibold", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button2.ForeColor = SystemColors.Highlight;
-            button2.Location = new Point(109, 343);
-            button2.Name = "button2";
-            button2.Size = new Size(260, 67);
-            button2.TabIndex = 20;
-            button2.Text = "Create Member";
-            button2.UseVisualStyleBackColor = true;
+            emailValue.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            emailValue.Location = new Point(187, 196);
+            emailValue.Name = "emailValue";
+            emailValue.Size = new Size(299, 34);
+            emailValue.TabIndex = 25;
+            // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.Font = new Font("Segoe UI", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label5.ForeColor = Color.SteelBlue;
+            label5.Location = new Point(17, 192);
+            label5.Name = "label5";
+            label5.Size = new Size(83, 38);
+            label5.TabIndex = 24;
+            label5.Text = "Email";
+            // 
+            // lastNameValue
+            // 
+            lastNameValue.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lastNameValue.Location = new Point(187, 131);
+            lastNameValue.Name = "lastNameValue";
+            lastNameValue.Size = new Size(299, 34);
+            lastNameValue.TabIndex = 23;
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Font = new Font("Segoe UI", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label4.ForeColor = Color.SteelBlue;
+            label4.Location = new Point(17, 127);
+            label4.Name = "label4";
+            label4.Size = new Size(147, 38);
+            label4.TabIndex = 22;
+            label4.Text = "Last Name";
+            // 
+            // firstNameValue
+            // 
+            firstNameValue.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            firstNameValue.Location = new Point(187, 64);
+            firstNameValue.Name = "firstNameValue";
+            firstNameValue.Size = new Size(299, 34);
+            firstNameValue.TabIndex = 21;
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Font = new Font("Segoe UI", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label2.ForeColor = Color.SteelBlue;
+            label2.Location = new Point(17, 60);
+            label2.Name = "label2";
+            label2.Size = new Size(151, 38);
+            label2.TabIndex = 20;
+            label2.Text = "First Name";
             // 
             // teamMembersListBox
             // 
@@ -226,42 +227,42 @@
             teamMembersListBox.Size = new Size(417, 744);
             teamMembersListBox.TabIndex = 20;
             // 
-            // button3
+            // deleteSelectedButton
             // 
-            button3.Font = new Font("Segoe UI Semibold", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button3.ForeColor = SystemColors.Highlight;
-            button3.Location = new Point(1081, 493);
-            button3.Name = "button3";
-            button3.Size = new Size(205, 98);
-            button3.TabIndex = 28;
-            button3.Text = "Delete Selected";
-            button3.UseVisualStyleBackColor = true;
-            button3.Click += button3_Click;
+            deleteSelectedButton.Font = new Font("Segoe UI Semibold", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            deleteSelectedButton.ForeColor = SystemColors.Highlight;
+            deleteSelectedButton.Location = new Point(1081, 493);
+            deleteSelectedButton.Name = "deleteSelectedButton";
+            deleteSelectedButton.Size = new Size(205, 98);
+            deleteSelectedButton.TabIndex = 28;
+            deleteSelectedButton.Text = "Delete Selected";
+            deleteSelectedButton.UseVisualStyleBackColor = true;
+            deleteSelectedButton.Click += button3_Click;
             // 
-            // button4
+            // createTeamButton
             // 
-            button4.Font = new Font("Segoe UI Semibold", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button4.ForeColor = SystemColors.Highlight;
-            button4.Location = new Point(451, 944);
-            button4.Name = "button4";
-            button4.Size = new Size(338, 98);
-            button4.TabIndex = 29;
-            button4.Text = "Create Team";
-            button4.UseVisualStyleBackColor = true;
+            createTeamButton.Font = new Font("Segoe UI Semibold", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            createTeamButton.ForeColor = SystemColors.Highlight;
+            createTeamButton.Location = new Point(451, 944);
+            createTeamButton.Name = "createTeamButton";
+            createTeamButton.Size = new Size(338, 98);
+            createTeamButton.TabIndex = 29;
+            createTeamButton.Text = "Create Team";
+            createTeamButton.UseVisualStyleBackColor = true;
             // 
             // CreateTeamForm
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1298, 1071);
-            Controls.Add(button4);
-            Controls.Add(button3);
+            Controls.Add(createTeamButton);
+            Controls.Add(deleteSelectedButton);
             Controls.Add(teamMembersListBox);
             Controls.Add(groupBox1);
-            Controls.Add(button1);
+            Controls.Add(addMemberButton);
             Controls.Add(roundDropDown);
             Controls.Add(label3);
-            Controls.Add(TeamOneScoreValue);
+            Controls.Add(teamNameValue);
             Controls.Add(TeamOneScoreLabel);
             Controls.Add(label1);
             Name = "CreateTeamForm";
@@ -275,23 +276,23 @@
         #endregion
 
         private Label label1;
-        private TextBox TeamOneScoreValue;
+        private TextBox teamNameValue;
         private Label TeamOneScoreLabel;
         private ComboBox roundDropDown;
         private Label label3;
-        private Button button1;
+        private Button addMemberButton;
         private GroupBox groupBox1;
-        private TextBox textBox3;
+        private TextBox emailValue;
         private Label label5;
-        private TextBox textBox2;
+        private TextBox lastNameValue;
         private Label label4;
-        private TextBox textBox1;
+        private TextBox firstNameValue;
         private Label label2;
-        private Button button2;
-        private TextBox textBox4;
+        private Button createMemberButton;
+        private TextBox cellphoneValue;
         private Label label6;
         private ListBox teamMembersListBox;
-        private Button button3;
-        private Button button4;
+        private Button deleteSelectedButton;
+        private Button createTeamButton;
     }
 }
