@@ -65,8 +65,8 @@ namespace TrackerLibrary.DataAccess.TextHelpers
 
                 PersonModel p = new PersonModel();
                 p.Id = int.Parse(cols[0]);
-                p.FirstName = cols[0];
-                p.LastName = cols[1];
+                p.FirstName = cols[1];
+                p.LastName = cols[2];
                 p.EmailAddress = cols[3];
                 p.CellPhoneNumber = cols[4];
                 output.Add(p);

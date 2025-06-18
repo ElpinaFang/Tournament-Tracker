@@ -9,9 +9,11 @@ using Dapper;
 using TrackerLibrary.Models;
 
 namespace TrackerLibrary.DataAccess
-{
+{    
     public class SqlConnector : IDataConnection
     {
+        private const string db = "Tournaments";
+
         // TODO - Make the CreatePrize method actually save to the database.
         /// <summary>
         /// Saves a new prize to the database.
@@ -20,7 +22,7 @@ namespace TrackerLibrary.DataAccess
         /// <returns>The prize information, including the unique identifier.</returns>
         public PrizeModel CreatePrize(PrizeModel model)
         {
-            using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(GlobalConfig.CnnString("Tournaments")))
+            using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(GlobalConfig.CnnString(db)))
             {
                 var p = new DynamicParameters();
                 p.Add("@PlaceNumber", model.PlaceNumber);
@@ -39,7 +41,7 @@ namespace TrackerLibrary.DataAccess
 
         public PersonModel CreatePerson(PersonModel model)
         {
-            using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(GlobalConfig.CnnString("Tournaments")))
+            using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(GlobalConfig.CnnString(db)))
             {
                 var p = new DynamicParameters();
                 p.Add("@FirstName", model.FirstName);
@@ -56,6 +58,16 @@ namespace TrackerLibrary.DataAccess
             }
         }
 
+        public List<PersonModel> GetPerson_All()
+        {
+            List<PersonModel> output;
 
+            using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(GlobalConfig.CnnString(db)))
+            {
+                output = connection.Query<PersonModel>("dbo.spPeople_GetAll").ToList();
+            }
+
+            return output;
+        }
     }
 }
