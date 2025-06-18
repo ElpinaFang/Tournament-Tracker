@@ -47,7 +47,7 @@ namespace TrackerUI
             teamMembersListBox.DataSource = selectedTeamMembers;
             teamMembersListBox.DisplayMember = "FullName";
         }
-     
+
         private void createMemberButton_Click(object sender, EventArgs e)
         {
             if (ValidateForm())
@@ -110,7 +110,7 @@ namespace TrackerUI
                 availableTeamMembers.Remove(p);
                 selectedTeamMembers.Add(p);
 
-                WireUpLists(); 
+                WireUpLists();
             }
             //selectTeamMemberDropDown.Refresh();
             //teamMembersListBox.Refresh();
@@ -125,9 +125,20 @@ namespace TrackerUI
                 selectedTeamMembers.Remove(p);
                 availableTeamMembers.Add(p);
 
-                WireUpLists(); 
+                WireUpLists();
             }
+        }
 
+        private void createTeamButton_Click(object sender, EventArgs e)
+        {
+            TeamModel t = new TeamModel();
+
+            t.TeamName = teamNameValue.Text;
+            t.TeamMembers = selectedTeamMembers;
+
+            t = GlobalConfig.Connection.CreateTeam(t);
+
+            // TODO - if we aren't closing this form after creation, reset the form
         }
     }
 }

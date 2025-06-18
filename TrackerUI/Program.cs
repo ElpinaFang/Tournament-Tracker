@@ -23,4 +23,4 @@ namespace TrackerUI
             Application.Run(new CreateTeamForm());
         }
     }
-}
+} 
