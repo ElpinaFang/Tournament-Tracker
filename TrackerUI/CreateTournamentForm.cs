@@ -115,5 +115,39 @@ namespace TrackerUI
                 WireUpLists();
             }
         }
+
+        private void createTournamentButton_Click(object sender, EventArgs e)
+        {
+            // Validate data
+            decimal fee = 0;
+
+            bool feeAcceptable = decimal.TryParse(entryFeeValue.Text, out fee);
+
+            if (!feeAcceptable)
+            {
+                MessageBox.Show("You need to enter a valid Entry Fee.", 
+                    "Invalid Fee",               
+                    MessageBoxButtons.OKCancel);
+                return;
+            }
+
+            // Create out tournament model
+            TournamentModel tm = new TournamentModel();
+
+            tm.TournamentName = tournamentNameValue.Text;
+            tm.EntryFee = 0;
+
+            tm.Prizes = selectedPrizes;
+            tm.EnteredTeams = selectedTeams;
+
+            // Wire our matchups
+
+            // create tournament entry
+            // create all of the prizes entries
+            // create all the team entries
+            GlobalConfig.Connection.CreateTournament(tm);
+
+            // create out matchups
+        }
     }
 }

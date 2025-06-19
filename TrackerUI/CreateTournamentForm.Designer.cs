@@ -31,7 +31,7 @@
             label1 = new Label();
             tournamentNameValue = new TextBox();
             TeamOneScoreLabel = new Label();
-            entryfeeValue = new TextBox();
+            entryFeeValue = new TextBox();
             label2 = new Label();
             label3 = new Label();
             selectTeamDropDown = new ComboBox();
@@ -77,13 +77,13 @@
             TeamOneScoreLabel.Text = "Tournament Name";
             TeamOneScoreLabel.Click += TeamOneScoreLabel_Click;
             // 
-            // entryfeeValue
+            // entryFeeValue
             // 
-            entryfeeValue.Location = new Point(190, 242);
-            entryfeeValue.Name = "entryfeeValue";
-            entryfeeValue.Size = new Size(131, 27);
-            entryfeeValue.TabIndex = 12;
-            entryfeeValue.Text = "0";
+            entryFeeValue.Location = new Point(190, 242);
+            entryFeeValue.Name = "entryFeeValue";
+            entryFeeValue.Size = new Size(131, 27);
+            entryFeeValue.TabIndex = 12;
+            entryFeeValue.Text = "0";
             // 
             // label2
             // 
@@ -227,6 +227,7 @@
             createTournamentButton.TabIndex = 24;
             createTournamentButton.Text = "Create Tournament";
             createTournamentButton.UseVisualStyleBackColor = true;
+            createTournamentButton.Click += createTournamentButton_Click;
             // 
             // CreateTournamentForm
             // 
@@ -245,7 +246,7 @@
             Controls.Add(linkLabel1);
             Controls.Add(selectTeamDropDown);
             Controls.Add(label3);
-            Controls.Add(entryfeeValue);
+            Controls.Add(entryFeeValue);
             Controls.Add(label2);
             Controls.Add(tournamentNameValue);
             Controls.Add(TeamOneScoreLabel);
@@ -261,7 +262,7 @@
         private Label label1;
         private TextBox tournamentNameValue;
         private Label TeamOneScoreLabel;
-        private TextBox entryfeeValue;
+        private TextBox entryFeeValue;
         private Label label2;
         private Label label3;
         private ComboBox selectTeamDropDown;
