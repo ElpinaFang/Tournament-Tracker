@@ -30,7 +30,7 @@
         {
             label1 = new Label();
             label2 = new Label();
-            roundDropDown = new ComboBox();
+            loadExistingTournamentDropDown = new ComboBox();
             loadTournamentButton = new Button();
             createTournamentButton = new Button();
             SuspendLayout();
@@ -59,17 +59,17 @@
             label2.Text = "Load Existing Tournament";
             label2.Click += label2_Click;
             // 
-            // roundDropDown
+            // loadExistingTournamentDropDown
             // 
-            roundDropDown.DropDownHeight = 200;
-            roundDropDown.DropDownWidth = 600;
-            roundDropDown.FormattingEnabled = true;
-            roundDropDown.IntegralHeight = false;
-            roundDropDown.ItemHeight = 20;
-            roundDropDown.Location = new Point(150, 203);
-            roundDropDown.Name = "roundDropDown";
-            roundDropDown.Size = new Size(528, 28);
-            roundDropDown.TabIndex = 17;
+            loadExistingTournamentDropDown.DropDownHeight = 200;
+            loadExistingTournamentDropDown.DropDownWidth = 600;
+            loadExistingTournamentDropDown.FormattingEnabled = true;
+            loadExistingTournamentDropDown.IntegralHeight = false;
+            loadExistingTournamentDropDown.ItemHeight = 20;
+            loadExistingTournamentDropDown.Location = new Point(150, 203);
+            loadExistingTournamentDropDown.Name = "loadExistingTournamentDropDown";
+            loadExistingTournamentDropDown.Size = new Size(528, 28);
+            loadExistingTournamentDropDown.TabIndex = 17;
             // 
             // loadTournamentButton
             // 
@@ -81,6 +81,7 @@
             loadTournamentButton.TabIndex = 32;
             loadTournamentButton.Text = "Load Tournament";
             loadTournamentButton.UseVisualStyleBackColor = true;
+            loadTournamentButton.Click += loadTournamentButton_Click;
             // 
             // createTournamentButton
             // 
@@ -101,11 +102,12 @@
             ClientSize = new Size(832, 505);
             Controls.Add(createTournamentButton);
             Controls.Add(loadTournamentButton);
-            Controls.Add(roundDropDown);
+            Controls.Add(loadExistingTournamentDropDown);
             Controls.Add(label2);
             Controls.Add(label1);
             Name = "TournamentDashboardForm";
             Text = "Tournament Dashboard";
+            Load += TournamentDashboardForm_Load;
             ResumeLayout(false);
             PerformLayout();
         }
@@ -114,7 +116,7 @@
 
         private Label label1;
         private Label label2;
-        private ComboBox roundDropDown;
+        private ComboBox loadExistingTournamentDropDown;
         private Button loadTournamentButton;
         private Button createTournamentButton;
     }

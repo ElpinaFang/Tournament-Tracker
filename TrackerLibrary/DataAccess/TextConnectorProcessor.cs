@@ -143,8 +143,9 @@ namespace TrackerLibrary.DataAccess.TextHelpers
                 }
 
                 // Capture Rounds Information                
+               
                 string[] rounds = cols[5].Split('|');
-                
+
                 foreach (string round in rounds)
                 {
                     string[] msText = round.Split('^');
@@ -152,11 +153,25 @@ namespace TrackerLibrary.DataAccess.TextHelpers
 
                     foreach (string matchupModelTextId in msText)
                     {
-                        ms.Add(matchups.Where(x => x.Id == int.Parse(matchupModelTextId)).First());
+                        //ms.Add(matchups.Where(x => x.Id == int.Parse(matchupModelTextId)).First());
+                        if (int.TryParse(matchupModelTextId, out int id))
+                        {
+                            var match = matchups.FirstOrDefault(x => x.Id == id);
+                            if (match != null)
+                            {
+                                ms.Add(match);
+                            }
+                            else
+                            {
+                                // Optional: log or skip invalid ID
+                            }
+                        }
                     }
-                    
-                    tm.Rounds.Add(ms);                                    
+
+                    tm.Rounds.Add(ms);
                 }
+                
+                
 
                 output.Add(tm);              
             }
@@ -335,15 +350,31 @@ namespace TrackerLibrary.DataAccess.TextHelpers
                 MatchupModel p = new MatchupModel();
                 p.Id = int.Parse(cols[0]);
                 p.Entries = ConvertStringToMatchupEntryModels(cols[1]);
-                if (cols[2].Length == 0)
+                /*if (cols[2].Length == 0)
                 {
                     p.Winner = null;
                 }
                 else
                 {
                     p.Winner = LookupTeamById(int.Parse(cols[2]));
-                }  
-                
+                } */
+
+                if (string.IsNullOrWhiteSpace(cols[2]))
+                {
+                    p.Winner = null;
+                }
+                else
+                {
+                    if (int.TryParse(cols[2], out int winnerId))
+                    {
+                        p.Winner = LookupTeamById(winnerId);
+                    }
+                    else
+                    {
+                        p.Winner = null; // or throw/log if that's an error
+                    }
+                }
+
                 p.MatchupRound = int.Parse(cols[3]);         
                 output.Add(p);
             }
