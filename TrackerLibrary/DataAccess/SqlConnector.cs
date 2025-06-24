@@ -156,7 +156,7 @@ namespace TrackerLibrary.DataAccess
                     {
                         p = new DynamicParameters();
                         p.Add("@MatchupId", matchup.Id);
-                        //p.Add("@ParentMatchupId", entry.ParentMatchup);
+                        p.Add("@ParentMatchupId", entry.ParentMatchup);
                         if (entry.TeamCompeting == null)
                         {
                             p.Add("@TeamCompetingId", null);
@@ -166,7 +166,7 @@ namespace TrackerLibrary.DataAccess
                             p.Add("@TeamCompetingId", entry.TeamCompeting.Id);
                         }
                         
-                        p.Add("@is", 0, dbType: DbType.Int32, direction: ParameterDirection.Output);
+                        p.Add("@id", 0, dbType: DbType.Int32, direction: ParameterDirection.Output);
 
                         connection.Execute("dbo.spMatchupEntries_Insert", p, commandType: CommandType.StoredProcedure);
                     }
@@ -242,9 +242,9 @@ namespace TrackerLibrary.DataAccess
                     foreach(MatchupModel m in matchups)
                     {
                         p = new DynamicParameters();
-                        p.Add("@Matchu[Id", t.Id);
+                        p.Add("@MatchupId", t.Id);
 
-                        m.Entries = connection.Query<MatchupEntryModel>("dbo.spMathcupEntries_GetByMatchup", p, commandType: CommandType.StoredProcedure).ToList();
+                        m.Entries = connection.Query<MatchupEntryModel>("dbo.spMatchupEntries_GetByMatchup", p, commandType: CommandType.StoredProcedure).ToList();
 
                         // Populate each entry (2 models)
                         // Populate each matchup (1 model)

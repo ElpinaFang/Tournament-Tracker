@@ -184,7 +184,7 @@ namespace TrackerLibrary.DataAccess.TextHelpers
 
             foreach (PrizeModel p in models)
             {
-                lines.Add($"{p.Id}, {p.PlaceNumber}, {p.PlaceName}, {p.PrizeAmount}, {p.PrizePercentage}");
+                lines.Add($"{ p.Id },{ p.PlaceNumber },{ p.PlaceName },{ p.PrizeAmount },{ p.PrizePercentage }");
             }
 
             File.WriteAllLines(fileName.FullFilePath(), lines);
@@ -196,7 +196,7 @@ namespace TrackerLibrary.DataAccess.TextHelpers
 
             foreach (PersonModel p in models)
             {
-                lines.Add($"{p.Id}, {p.FirstName}, {p.LastName}, {p.EmailAddress}, {p.CellPhoneNumber}");
+                lines.Add($"{ p.Id },{ p.FirstName },{ p.LastName },{ p.EmailAddress },{ p.CellPhoneNumber }");
             }
 
             File.WriteAllLines(filename.FullFilePath(), lines);
@@ -208,7 +208,7 @@ namespace TrackerLibrary.DataAccess.TextHelpers
 
             foreach (TeamModel t in models)
             {
-                lines.Add($"{ t.Id }, { t.TeamName} , { ConvertPeopleListToString(t.TeamMembers) }");
+                lines.Add($"{ t.Id },{ t.TeamName},{ ConvertPeopleListToString(t.TeamMembers) }");
             }
 
             File.WriteAllLines(fileName.FullFilePath(), lines);
@@ -407,7 +407,7 @@ namespace TrackerLibrary.DataAccess.TextHelpers
             //    {
             //        winner = m.Winner.Id.ToString();
             //    }
-            //    lines.Add($" {m.Id}, { "" }, {winner}, {m.MatchupRound}");
+            //    lines.Add($" {m.Id},{ "" },{winner},{m.MatchupRound}");
             //}
 
             //File.WriteAllLines(GlobalConfig.MatchupFile.FullFilePath(), lines);
@@ -427,7 +427,7 @@ namespace TrackerLibrary.DataAccess.TextHelpers
                 {
                     winner = m.Winner.Id.ToString();
                 }
-                lines.Add($" { m.Id }, { ConvertMatchupEntryListToString(m.Entries) }, { winner }, { m.MatchupRound }");
+                lines.Add($" { m.Id },{ ConvertMatchupEntryListToString(m.Entries) },{ winner },{ m.MatchupRound }");
             }
 
             File.WriteAllLines(GlobalConfig.MatchupFile.FullFilePath(), lines);
@@ -462,7 +462,7 @@ namespace TrackerLibrary.DataAccess.TextHelpers
                 {
                     teamCompeting = e.TeamCompeting.Id.ToString();
                 }
-                lines.Add($"{ e.Id}, { teamCompeting }, {e.Score}, { parent }");
+                lines.Add($"{ e.Id},{ teamCompeting },{e.Score},{ parent }");
             }
 
             File.WriteAllLines(GlobalConfig.MatchupEntryFile.FullFilePath(), lines);
@@ -474,7 +474,7 @@ namespace TrackerLibrary.DataAccess.TextHelpers
 
             foreach (TournamentModel tm in models)
             {
-                lines.Add($"{tm.Id}, {tm.TournamentName}, {tm.EntryFee}, { ConvertTeamListToString(tm.EnteredTeams) }, { ConvertPrizeListToString(tm.Prizes) }, { ConvertRoundListToString(tm.Rounds) } ");
+                lines.Add($"{tm.Id},{tm.TournamentName},{tm.EntryFee},{ ConvertTeamListToString(tm.EnteredTeams) },{ ConvertPrizeListToString(tm.Prizes) },{ ConvertRoundListToString(tm.Rounds) }");
             }
 
             File.WriteAllLines(fileName.FullFilePath(), lines);
