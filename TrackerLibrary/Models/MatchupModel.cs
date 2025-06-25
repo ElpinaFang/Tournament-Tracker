@@ -23,6 +23,7 @@ namespace TrackerLibrary.Models
             get
             {
                 string output = "";
+
                 foreach (MatchupEntryModel me in Entries)
                 {
                     if (me.TeamCompeting != null)
